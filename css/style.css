@@ -728,6 +728,20 @@ footer .container {
 }
 
 /* ---- Video Portfolio ---- */
+.video-scroll-wrap {
+  position: relative;
+}
+.video-scroll-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  z-index: 1;
+}
 .video-scroll {
   display: flex;
   gap: 12px;
@@ -749,7 +763,7 @@ footer .container {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  background: #111;
+  background: var(--bg-warm);
 }
 .video-thumb img {
   width: 100%;
