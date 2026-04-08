@@ -1,0 +1,106 @@
+<svg viewBox="0 0 440 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="440" height="540" fill="#f5f0ea"/>
+
+
+  <!-- Desk surface -->
+  <rect x="28" y="346" width="384" height="14" rx="5" fill="#ddd5ca"/>
+  <rect x="48" y="360" width="344" height="70" fill="#e8e0d6"/>
+
+  <!-- === LAPTOP === -->
+  <!-- Laptop base -->
+  <rect x="88" y="302" width="254" height="18" rx="5" fill="#c2b8ae"/>
+  <!-- Hinge highlight -->
+  <rect x="88" y="302" width="254" height="6" rx="3" fill="#b0a699"/>
+  <!-- Keyboard area -->
+  <rect x="96" y="310" width="238" height="8" rx="2" fill="#bbb0a6" fill-opacity="0.5"/>
+
+  <!-- Lid/screen casing -->
+  <rect x="96" y="106" width="238" height="200" rx="8" fill="#222"/>
+
+  <!-- Screen bezel -->
+  <rect x="102" y="112" width="226" height="188" rx="6" fill="#1a1a1a"/>
+
+  <!-- Screen -->
+  <rect x="110" y="120" width="210" height="172" rx="4" fill="#faf8f5"/>
+
+  <!-- Screen top bar -->
+  <rect x="110" y="120" width="210" height="26" rx="4" fill="#1a1a1a"/>
+  <rect x="110" y="134" width="210" height="12" fill="#1a1a1a"/>
+  <circle cx="126" cy="133" r="4.5" fill="#d65200"/>
+  <rect x="140" y="130" width="55" height="7" rx="3.5" fill="white" fill-opacity="0.18"/>
+
+  <!-- Dashboard cards row -->
+  <rect x="118" y="155" width="58" height="38" rx="5" fill="#d65200" fill-opacity="0.14"/>
+  <rect x="122" y="160" width="28" height="5" rx="2.5" fill="#d65200" fill-opacity="0.45"/>
+  <rect x="122" y="170" width="42" height="13" rx="3" fill="#d65200" fill-opacity="0.8"/>
+
+  <rect x="183" y="155" width="58" height="38" rx="5" fill="#e8e0d8"/>
+  <rect x="187" y="160" width="28" height="5" rx="2.5" fill="#bbb0a6"/>
+  <rect x="187" y="170" width="42" height="13" rx="3" fill="#ccc4ba"/>
+
+  <rect x="248" y="155" width="64" height="38" rx="5" fill="#1a1a1a" fill-opacity="0.06"/>
+  <rect x="252" y="160" width="28" height="5" rx="2.5" fill="#bbb0a6"/>
+  <rect x="252" y="170" width="42" height="13" rx="3" fill="#ddd5ca"/>
+
+  <!-- Line chart on screen -->
+  <path d="M118 272 L145 252 L172 258 L200 234 L228 241 L256 214 L312 218"
+    stroke="#d65200" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Area fill under chart -->
+  <path d="M118 272 L145 252 L172 258 L200 234 L228 241 L256 214 L312 218 L312 278 L118 278 Z"
+    fill="#d65200" fill-opacity="0.07"/>
+  <!-- Chart end dot -->
+  <circle cx="312" cy="218" r="4.5" fill="#d65200"/>
+  <circle cx="312" cy="218" r="9" fill="#d65200" fill-opacity="0.18"/>
+  <!-- Chart baseline -->
+  <line x1="110" y1="278" x2="318" y2="278" stroke="#e0d8d0" stroke-width="1.2"/>
+
+  <!-- === PLANT (right of laptop) === -->
+  <!-- Pot -->
+  <rect x="334" y="306" width="46" height="34" rx="5" fill="#c2b8ae"/>
+  <rect x="332" y="302" width="50" height="8" rx="4" fill="#b0a699"/>
+  <!-- Soil -->
+  <ellipse cx="357" cy="303" rx="20" ry="5" fill="#8b7355" fill-opacity="0.4"/>
+  <!-- Stems -->
+  <line x1="357" y1="302" x2="344" y2="258" stroke="#6aaa6a" stroke-width="3" stroke-linecap="round"/>
+  <line x1="357" y1="297" x2="372" y2="252" stroke="#5a9a5a" stroke-width="3" stroke-linecap="round"/>
+  <line x1="357" y1="292" x2="357" y2="242" stroke="#72b472" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <ellipse cx="339" cy="253" rx="17" ry="11" fill="#72b472" transform="rotate(-28 339 253)"/>
+  <ellipse cx="374" cy="247" rx="17" ry="11" fill="#5a9a5a" transform="rotate(22 374 247)"/>
+  <ellipse cx="357" cy="235" rx="15" ry="10" fill="#7acc7a"/>
+
+  <!-- === COFFEE CUP (left of laptop) === -->
+  <!-- Cup body -->
+  <rect x="52" y="306" width="38" height="30" rx="5" fill="white" stroke="#e0d8d0" stroke-width="1.5"/>
+  <!-- Handle -->
+  <path d="M90 313 Q107 313 107 321 Q107 329 90 329" stroke="#e0d8d0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Saucer -->
+  <ellipse cx="71" cy="338" rx="24" ry="4.5" fill="#ddd5ca"/>
+  <!-- Steam lines -->
+  <path d="M64 304 Q66 295 64 286" stroke="#ddd5ca" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M71 302 Q73 293 71 284" stroke="#ddd5ca" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Coffee latte art circle -->
+  <ellipse cx="71" cy="312" rx="13" ry="4" fill="#c8a882" fill-opacity="0.4"/>
+  <!-- Cup label dot -->
+  <circle cx="71" cy="320" r="7" fill="#d65200" fill-opacity="0.18"/>
+
+  <!-- === FLOATING NOTE CARD === -->
+  <rect x="24" y="170" width="92" height="88" rx="10" fill="white" stroke="#e8e0d8" stroke-width="1"/>
+  <!-- Note lines -->
+  <rect x="36" y="184" width="52" height="5.5" rx="2.75" fill="#e8e0d8"/>
+  <rect x="36" y="196" width="68" height="5.5" rx="2.75" fill="#e8e0d8"/>
+  <rect x="36" y="208" width="44" height="5.5" rx="2.75" fill="#e8e0d8"/>
+  <!-- Tag -->
+  <rect x="36" y="225" width="60" height="16" rx="5" fill="#d65200" fill-opacity="0.14"/>
+  <rect x="42" y="229" width="36" height="7" rx="3.5" fill="#d65200" fill-opacity="0.55"/>
+
+  <!-- === SMALL DOT ACCENTS === -->
+  <circle cx="415" cy="210" r="9" fill="#d65200" fill-opacity="0.18"/>
+  <circle cx="25" cy="130" r="6" fill="#d65200" fill-opacity="0.28"/>
+  <circle cx="418" cy="360" r="5.5" fill="#d65200" fill-opacity="0.28"/>
+  <circle cx="22" cy="430" r="11" fill="#d65200" fill-opacity="0.12"/>
+
+
+</svg>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Concepts — nana studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #d65200;
+      --orange-light: #f4e8e0;
+      --black: #1a1a1a;
+      --dark: #3a3a3a;
+      --mid: #999;
+      --border-c: #e0d8d0;
+      --bg: #faf8f5;
+      --bg-warm: #f5f0ea;
+      --white: #ffffff;
+      --font: 'Zen Maru Gothic', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-header {
+      padding: 64px 40px 48px;
+      border-bottom: 1px solid var(--border-c);
+    }
+
+    .page-header p {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--orange);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .page-header small {
+      font-size: 0.82rem;
+      color: var(--mid);
+    }
+
+    /* ---- CONCEPT WRAPPER ---- */
+
+    .concepts {
+      padding: 60px 40px;
+      display: grid;
+      gap: 48px;
+    }
+
+    .concept {
+      background: var(--white);
+      border: 1px solid var(--border-c);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .concept-meta {
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border-c);
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .concept-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--orange);
+    }
+
+    .concept-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .concept-desc {
+      font-size: 0.78rem;
+      color: var(--mid);
+      margin-left: auto;
+    }
+
+    /* ---- PREVIEW AREAS ---- */
+
+    .preview-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .preview-bg-light {
+      background: var(--bg);
+      padding: 60px 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      border-right: 1px solid var(--border-c);
+    }
+
+    .preview-bg-dark {
+      background: var(--black);
+      padding: 60px 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .preview-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--mid);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .concept-notes {
+      padding: 20px 32px;
+      border-top: 1px solid var(--border-c);
+      background: var(--bg);
+    }
+
+    .concept-notes ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .concept-notes li {
+      font-size: 0.75rem;
+      color: var(--dark);
+    }
+
+    .concept-notes li::before {
+      content: "— ";
+      color: var(--orange);
+    }
+
+    /* ============================
+       LOGO A: ドット + シンプルテキスト
+       ============================ */
+
+    .logo-a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--black);
+    }
+
+    .logo-a .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .logo-a-dark {
+      color: var(--white);
+    }
+
+    /* large */
+    .logo-a.lg { font-size: 1.8rem; }
+    .logo-a.lg .dot { width: 12px; height: 12px; }
+
+    /* ============================
+       LOGO B: nana / studio 2行
+       ============================ */
+
+    .logo-b {
+      font-family: var(--font);
+      line-height: 1;
+    }
+
+    .logo-b .b-nana {
+      display: block;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      color: var(--orange);
+    }
+
+    .logo-b .b-studio {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.38em;
+      color: var(--black);
+      padding-left: 2px;
+      margin-top: 4px;
+    }
+
+    .logo-b-dark .b-nana { color: var(--orange); }
+    .logo-b-dark .b-studio { color: rgba(255,255,255,0.65); }
+
+    .logo-b.sm .b-nana  { font-size: 1.1rem; }
+    .logo-b.sm .b-studio { font-size: 0.55rem; letter-spacing: 0.3em; margin-top: 2px; }
+
+    /* ============================
+       LOGO C: 角丸囲み + テキスト
+       ============================ */
+
+    .logo-c {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font);
+    }
+
+    .logo-c .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-c .mark span {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.04em;
+    }
+
+    .logo-c .text-part {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-c .c-nana {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .logo-c .c-studio {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      color: var(--mid);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .logo-c-dark .c-nana { color: var(--white); }
+    .logo-c-dark .c-studio { color: rgba(255,255,255,0.4); }
+
+    .logo-c.sm .mark { width: 28px; height: 28px; border-radius: 6px; }
+    .logo-c.sm .mark span { font-size: 0.7rem; }
+    .logo-c.sm .c-nana  { font-size: 0.78rem; }
+    .logo-c.sm .c-studio { font-size: 0.5rem; letter-spacing: 0.2em; }
+
+    /* ============================
+       LOGO D: 横線アクセント
+       ============================ */
+
+    .logo-d {
+      font-family: var(--font);
+    }
+
+    .logo-d .d-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-d .d-line {
+      width: 28px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .logo-d .d-nana {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .logo-d .d-studio {
+      font-size: 0.6rem;
+      letter-spacing: 0.4em;
+      color: var(--mid);
+      font-weight: 500;
+      margin-top: 6px;
+      padding-left: 40px;
+    }
+
+    .logo-d-dark .d-nana { color: var(--white); }
+    .logo-d-dark .d-studio { color: rgba(255,255,255,0.4); }
+
+    .logo-d.sm .d-nana   { font-size: 0.95rem; }
+    .logo-d.sm .d-line   { width: 16px; }
+    .logo-d.sm .d-studio { font-size: 0.52rem; letter-spacing: 0.28em; padding-left: 28px; margin-top: 4px; }
+
+    /* ============================
+       LOGO E: オレンジ背景バッジ
+       ============================ */
+
+    .logo-e {
+      display: inline-flex;
+      font-family: var(--font);
+    }
+
+    .logo-e .e-nana {
+      background: var(--orange);
+      color: var(--white);
+      padding: 8px 14px;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .logo-e .e-studio {
+      background: var(--black);
+      color: var(--white);
+      padding: 8px 14px;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      line-height: 1;
+    }
+
+    .logo-e-dark .e-studio {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .logo-e.sm .e-nana   { font-size: 0.72rem; padding: 5px 10px; }
+    .logo-e.sm .e-studio { font-size: 0.72rem; padding: 5px 10px; }
+
+    /* ---- USAGE EXAMPLE ---- */
+
+    .usage-row {
+      padding: 28px 32px;
+      border-top: 1px solid var(--border-c);
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .usage-label {
+      font-size: 0.65rem;
+      color: var(--mid);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    /* Fake nav bar */
+    .fake-nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 14px 24px;
+      background: var(--bg);
+      border: 1px solid var(--border-c);
+      border-radius: 2px;
+      flex: 1;
+    }
+
+    .fake-nav-links {
+      display: flex;
+      gap: 24px;
+      margin-left: auto;
+    }
+
+    .fake-nav-links span {
+      font-size: 0.7rem;
+      color: var(--mid);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <p>LOGO CONCEPTS</p>
+    <h1>nana studio — ロゴデザイン案</h1>
+    <small>5パターン / アクセントカラー #d65200 / Zen 丸ゴシック使用</small>
+  </div>
+
+  <div class="concepts">
+
+    <!-- ===== CONCEPT A ===== -->
+    <div class="concept">
+      <div class="concept-meta">
+        <span class="concept-num">CONCEPT A</span>
+        <span class="concept-name">ドット + シンプルテキスト</span>
+        <span class="concept-desc">最もシンプル。視認性が高くどこでも使いやすい。</span>
+      </div>
+      <div class="preview-row">
+        <div class="preview-bg-light">
+          <div>
+            <span class="preview-label">— LARGE</span>
+            <div class="logo-a lg">
+              <span class="dot"></span>
+              nana studio
+            </div>
+          </div>
+          <div>
+            <span class="preview-label">— SMALL (ナビゲーション)</span>
+            <div class="logo-a">
+              <span class="dot"></span>
+              nana studio
+            </div>
+          </div>
+        </div>
+        <div class="preview-bg-dark">
+          <div>
+            <span class="preview-label" style="color:#555">— DARK BACKGROUND</span>
+            <div class="logo-a lg logo-a-dark">
+              <span class="dot"></span>
+              nana studio
+            </div>
+          </div>
+          <div>
+            <div class="logo-a logo-a-dark">
+              <span class="dot"></span>
+              nana studio
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usage-row">
+        <span class="usage-label">ナビゲーション使用例</span>
+        <div class="fake-nav">
+          <div class="logo-a">
+            <span class="dot"></span>
+            nana studio
+          </div>
+          <div class="fake-nav-links">
+            <span>Services</span>
+            <span>Works</span>
+            <span>nam</span>
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-notes">
+        <ul>
+          <li>どんなサイズでも崩れない</li>
+          <li>ファビコンへの転用が容易</li>
+          <li>清潔感・信頼感のある印象</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== CONCEPT B ===== -->
+    <div class="concept">
+      <div class="concept-meta">
+        <span class="concept-num">CONCEPT B</span>
+        <span class="concept-name">nana をオレンジで強調 / 2行スタック</span>
+        <span class="concept-desc">「nana」の個性を前面に出す。クリエイター感が強い。</span>
+      </div>
+      <div class="preview-row">
+        <div class="preview-bg-light">
+          <div>
+            <span class="preview-label">— LARGE</span>
+            <div class="logo-b">
+              <span class="b-nana">nana</span>
+              <span class="b-studio">studio</span>
+            </div>
+          </div>
+          <div>
+            <span class="preview-label">— SMALL</span>
+            <div class="logo-b sm">
+              <span class="b-nana">nana</span>
+              <span class="b-studio">studio</span>
+            </div>
+          </div>
+        </div>
+        <div class="preview-bg-dark">
+          <div>
+            <span class="preview-label" style="color:#555">— DARK BACKGROUND</span>
+            <div class="logo-b logo-b-dark">
+              <span class="b-nana">nana</span>
+              <span class="b-studio">studio</span>
+            </div>
+          </div>
+          <div>
+            <div class="logo-b sm logo-b-dark">
+              <span class="b-nana">nana</span>
+              <span class="b-studio">studio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usage-row">
+        <span class="usage-label">ナビゲーション使用例</span>
+        <div class="fake-nav">
+          <div class="logo-b sm">
+            <span class="b-nana">nana</span>
+            <span class="b-studio">studio</span>
+          </div>
+          <div class="fake-nav-links">
+            <span>Services</span>
+            <span>Works</span>
+            <span>nam</span>
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-notes">
+        <ul>
+          <li>クリエイター・個人ブランドの雰囲気</li>
+          <li>「nana」の名前が印象に残りやすい</li>
+          <li>ヒーローエリアなど大きく使うと映える</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== CONCEPT C ===== -->
+    <div class="concept">
+      <div class="concept-meta">
+        <span class="concept-num">CONCEPT C</span>
+        <span class="concept-name">角丸マーク + テキスト</span>
+        <span class="concept-desc">アイコン的なマークを持つ。アプリアイコンやSNSプロフィール画像にも使いやすい。</span>
+      </div>
+      <div class="preview-row">
+        <div class="preview-bg-light">
+          <div>
+            <span class="preview-label">— LARGE</span>
+            <div class="logo-c">
+              <div class="mark"><span>ns</span></div>
+              <div class="text-part">
+                <span class="c-nana">nana studio</span>
+                <span class="c-studio">SNS CONSULTING</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="preview-label">— SMALL</span>
+            <div class="logo-c sm">
+              <div class="mark"><span>ns</span></div>
+              <div class="text-part">
+                <span class="c-nana">nana studio</span>
+                <span class="c-studio">SNS CONSULTING</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-bg-dark">
+          <div>
+            <span class="preview-label" style="color:#555">— DARK BACKGROUND</span>
+            <div class="logo-c logo-c-dark">
+              <div class="mark"><span>ns</span></div>
+              <div class="text-part">
+                <span class="c-nana">nana studio</span>
+                <span class="c-studio">SNS CONSULTING</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="logo-c sm logo-c-dark">
+              <div class="mark"><span>ns</span></div>
+              <div class="text-part">
+                <span class="c-nana">nana studio</span>
+                <span class="c-studio">SNS CONSULTING</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usage-row">
+        <span class="usage-label">ナビゲーション使用例</span>
+        <div class="fake-nav">
+          <div class="logo-c sm">
+            <div class="mark"><span>ns</span></div>
+            <div class="text-part">
+              <span class="c-nana">nana studio</span>
+              <span class="c-studio">SNS CONSULTING</span>
+            </div>
+          </div>
+          <div class="fake-nav-links">
+            <span>Services</span>
+            <span>Works</span>
+            <span>nam</span>
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-notes">
+        <ul>
+          <li>マーク単体でSNSアイコンとして使える</li>
+          <li>ビジネス感・プロフェッショナル感が強い</li>
+          <li>縦横どちらの展開もしやすい</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== CONCEPT D ===== -->
+    <div class="concept">
+      <div class="concept-meta">
+        <span class="concept-num">CONCEPT D</span>
+        <span class="concept-name">横線アクセント</span>
+        <span class="concept-desc">細かなオレンジラインがエレガント。女性らしさとスタイリッシュさを両立。</span>
+      </div>
+      <div class="preview-row">
+        <div class="preview-bg-light">
+          <div>
+            <span class="preview-label">— LARGE</span>
+            <div class="logo-d">
+              <div class="d-row">
+                <span class="d-line"></span>
+                <span class="d-nana">nana studio</span>
+              </div>
+              <div class="d-studio">SNS CONSULTING / CREATOR</div>
+            </div>
+          </div>
+          <div>
+            <span class="preview-label">— SMALL</span>
+            <div class="logo-d sm">
+              <div class="d-row">
+                <span class="d-line"></span>
+                <span class="d-nana">nana studio</span>
+              </div>
+              <div class="d-studio">SNS CONSULTING</div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-bg-dark">
+          <div>
+            <span class="preview-label" style="color:#555">— DARK BACKGROUND</span>
+            <div class="logo-d logo-d-dark">
+              <div class="d-row">
+                <span class="d-line"></span>
+                <span class="d-nana">nana studio</span>
+              </div>
+              <div class="d-studio">SNS CONSULTING / CREATOR</div>
+            </div>
+          </div>
+          <div>
+            <div class="logo-d sm logo-d-dark">
+              <div class="d-row">
+                <span class="d-line"></span>
+                <span class="d-nana">nana studio</span>
+              </div>
+              <div class="d-studio">SNS CONSULTING</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usage-row">
+        <span class="usage-label">ナビゲーション使用例</span>
+        <div class="fake-nav">
+          <div class="logo-d sm">
+            <div class="d-row">
+              <span class="d-line"></span>
+              <span class="d-nana">nana studio</span>
+            </div>
+          </div>
+          <div class="fake-nav-links">
+            <span>Services</span>
+            <span>Works</span>
+            <span>nam</span>
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-notes">
+        <ul>
+          <li>エレガント・スタイリッシュな印象</li>
+          <li>ファッション・ライフスタイル系との親和性が高い</li>
+          <li>サブテキストで事業内容を補足できる</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== CONCEPT E ===== -->
+    <div class="concept">
+      <div class="concept-meta">
+        <span class="concept-num">CONCEPT E</span>
+        <span class="concept-name">バイカラーブロック</span>
+        <span class="concept-desc">オレンジと黒の2ブロック構成。インパクトがあり記憶に残りやすい。</span>
+      </div>
+      <div class="preview-row">
+        <div class="preview-bg-light">
+          <div>
+            <span class="preview-label">— LARGE</span>
+            <div class="logo-e">
+              <span class="e-nana" style="font-size:1.4rem; padding: 12px 20px;">nana</span>
+              <span class="e-studio" style="font-size:1.4rem; padding: 12px 20px;">studio</span>
+            </div>
+          </div>
+          <div>
+            <span class="preview-label">— SMALL</span>
+            <div class="logo-e sm">
+              <span class="e-nana">nana</span>
+              <span class="e-studio">studio</span>
+            </div>
+          </div>
+        </div>
+        <div class="preview-bg-dark">
+          <div>
+            <span class="preview-label" style="color:#555">— DARK BACKGROUND</span>
+            <div class="logo-e" style="margin-bottom:0">
+              <span class="e-nana" style="font-size:1.4rem; padding: 12px 20px;">nana</span>
+              <span class="e-studio logo-e-dark" style="font-size:1.4rem; padding: 12px 20px; background: rgba(255,255,255,0.12);">studio</span>
+            </div>
+          </div>
+          <div>
+            <div class="logo-e sm">
+              <span class="e-nana">nana</span>
+              <span class="e-studio" style="background: rgba(255,255,255,0.12);">studio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usage-row">
+        <span class="usage-label">ナビゲーション使用例</span>
+        <div class="fake-nav">
+          <div class="logo-e sm">
+            <span class="e-nana">nana</span>
+            <span class="e-studio">studio</span>
+          </div>
+          <div class="fake-nav-links">
+            <span>Services</span>
+            <span>Works</span>
+            <span>nam</span>
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-notes">
+        <ul>
+          <li>一番目を引く・インパクト重視</li>
+          <li>SNSプロフィールのヘッダー画像などに映える</li>
+          <li>バッジ・スタンプ的な使い方もできる</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /concepts -->
+
+</body>
+</html>
