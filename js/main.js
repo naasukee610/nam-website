@@ -35,3 +35,25 @@ document.querySelectorAll(
   el.style.transitionDelay = `${(i % 4) * 0.07}s`;
   observer.observe(el);
 });
+
+// Flow steps: staggered animation
+const flowObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const delay = el.dataset.flowDelay || '0s';
+      el.style.animationDelay = delay;
+      el.classList.add('flow-visible');
+      flowObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.flow-step').forEach((el, i) => {
+  el.dataset.flowDelay = `${i * 0.1}s`;
+  el.addEventListener('animationend', () => {
+    el.classList.remove('flow-visible');
+    el.style.opacity = '1';
+  }, { once: true });
+  flowObserver.observe(el);
+});

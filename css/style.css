@@ -727,6 +727,92 @@ footer .container {
   color: var(--orange);
 }
 
+/* ---- Video Portfolio ---- */
+.video-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 24px 40px 32px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.video-scroll::-webkit-scrollbar { display: none; }
+
+.video-card {
+  flex-shrink: 0;
+  width: 200px;
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.video-card iframe {
+  display: block;
+  width: 200px;
+  height: 356px;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .video-scroll { padding: 20px 20px 28px; }
+  .video-card { width: 160px; }
+  .video-card iframe { width: 160px; height: 284px; }
+}
+
+/* ---- Flow Steps ---- */
+.flow-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.flow-step {
+  flex: 1;
+  text-align: center;
+  padding: 28px 16px;
+  border: 1px solid var(--border-c);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.flow-step:hover {
+  transform: translateY(-6px);
+  border-color: var(--orange);
+}
+.flow-num {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+}
+.flow-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+.flow-desc {
+  font-size: 0.75rem;
+  color: var(--mid);
+  line-height: 1.65;
+}
+.flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  opacity: 0.5;
+}
+
+/* ---- Flow step animation ---- */
+@keyframes flowStepIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.flow-step.flow-visible {
+  animation: flowStepIn 0.5s ease both;
+}
+
 /* ---- Scroll fade-in ---- */
 .fade-in {
   opacity: 0;
@@ -778,12 +864,18 @@ footer .container {
 
   footer .container { flex-direction: column; gap: 16px; text-align: center; }
 
-  /* Flowの5カラムをモバイルで縦積みに */
-  .flow-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .flow-grid > div {
-    border-right: none !important;
+  .flow-steps { flex-direction: column; gap: 0; }
+  .flow-step {
+    text-align: left;
+    padding: 20px 0;
     border-bottom: var(--border);
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
   }
+  .flow-step .flow-num { grid-column: 1; grid-row: 1; margin-bottom: 0; }
+  .flow-step .flow-title { grid-column: 2; grid-row: 1; }
+  .flow-step .flow-desc { grid-column: 2; grid-row: 2; margin-top: 4px; }
+  .flow-arrow { display: none; }
 }
