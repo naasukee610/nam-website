@@ -36,6 +36,14 @@ document.querySelectorAll(
   observer.observe(el);
 });
 
+// Video thumbnail → click to play
+document.querySelectorAll('.video-thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const id = thumb.dataset.id;
+    thumb.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  });
+});
+
 // Flow steps: staggered animation
 const flowObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

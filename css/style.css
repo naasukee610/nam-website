@@ -735,28 +735,56 @@ footer .container {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 24px max(28px, calc((100vw - 960px) / 2 + 28px)) 32px;
+  margin-top: 32px;
+  margin-left: -28px;
+  margin-right: -28px;
+  padding: 4px 28px 16px;
 }
 .video-scroll::-webkit-scrollbar { display: none; }
 
-.video-card {
+.video-thumb {
   flex-shrink: 0;
-  width: 200px;
+  width: 180px;
+  height: 320px;
   scroll-snap-align: start;
-  border-radius: var(--radius);
+  border-radius: 6px;
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: #111;
 }
-.video-card iframe {
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  width: 200px;
-  height: 356px;
-  border-radius: var(--radius);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.video-thumb:hover img {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+.video-thumb:hover .play-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.video-thumb iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 @media (max-width: 768px) {
-  .video-scroll { padding: 20px 20px 28px; overflow-x: auto; }
-  .video-card { width: 160px; }
-  .video-card iframe { width: 160px; height: 284px; }
+  .video-scroll { margin-left: -20px; margin-right: -20px; padding: 4px 20px 16px; }
+  .video-thumb { width: 150px; height: 267px; }
 }
 
 /* ---- Flow Steps ---- */
