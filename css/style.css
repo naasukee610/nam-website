@@ -733,9 +733,9 @@ footer .container {
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 24px 40px 32px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  padding: 24px max(28px, calc((100vw - 960px) / 2 + 28px)) 32px;
 }
 .video-scroll::-webkit-scrollbar { display: none; }
 
@@ -754,7 +754,7 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  .video-scroll { padding: 20px 20px 28px; }
+  .video-scroll { padding: 20px 20px 28px; overflow-x: auto; }
   .video-card { width: 160px; }
   .video-card iframe { width: 160px; height: 284px; }
 }
