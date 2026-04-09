@@ -964,6 +964,13 @@ footer .container {
 .sns-card-other .sns-logo {
   color: var(--brown);
 }
+.sns-card-other {
+  cursor: default;
+}
+.sns-card-other:hover {
+  border-color: var(--border-c);
+  transform: none;
+}
 @media (max-width: 768px) {
   .sns-cards { grid-template-columns: repeat(2, 1fr); }
   .sns-card-other { grid-column: span 2; }
@@ -973,6 +980,14 @@ footer .container {
 /* mobile: 1列 */
 .cards-4 {
   grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+}
+.cards-4 .card {
+  display: flex;
+  flex-direction: column;
+}
+.cards-4 .card p {
+  flex: 1;
 }
 .genre-photo {
   margin-top: 16px;
@@ -1135,7 +1150,7 @@ footer .container {
     padding: 20px 16px;
   }
   .flow-step:first-child { border-top: var(--border); }
-  .flow-step svg { display: none; }
+  .flow-step svg { display: block; }
   .flow-step .flow-num  { margin-bottom: 6px; }
   .flow-step .flow-title { font-size: 0.95rem; margin-bottom: 4px; }
   .flow-step .flow-desc { font-size: 0.78rem; }
