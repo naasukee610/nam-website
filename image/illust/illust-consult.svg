@@ -1,101 +1,110 @@
-<svg viewBox="0 0 560 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
 
   <!-- ===== PHONE 1 – left, tilted -14deg ===== -->
-  <g transform="translate(148,268) rotate(-14)">
-    <!-- Hand -->
-    <rect x="-26" y="60" width="52" height="90" rx="16" fill="#c98a62"/>
-    <rect x="-22" y="50" width="44" height="45" rx="12" fill="#c98a62"/>
-    <rect x="-22" y="48" width="44" height="12" rx="6" fill="#d9a07a"/>
-    <!-- Phone body -->
-    <rect x="-36" y="-140" width="72" height="128" rx="11" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2"/>
+  <!-- origin = grip center of hand -->
+  <g transform="translate(140,305) rotate(-14)">
+    <!-- Hand: grips phone from y=-35 upward, palm below -->
+    <rect x="-28" y="-35" width="56" height="45" rx="14" fill="#c98a62"/>
+    <rect x="-28" y="8"   width="56" height="85" rx="18" fill="#c98a62"/>
+    <!-- Knuckle highlight -->
+    <rect x="-24" y="-33" width="48" height="10" rx="5" fill="#d9a07a"/>
+    <!-- Thumb side bump -->
+    <ellipse cx="-34" cy="10" rx="10" ry="18" fill="#c98a62"/>
+
+    <!-- Phone body (bottom overlaps hand at y=-35) -->
+    <rect x="-44" y="-200" width="88" height="165" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
     <!-- top pill -->
-    <rect x="-12" y="-136" width="24" height="5" rx="2.5" fill="#e0d8d0"/>
+    <rect x="-14" y="-196" width="28" height="6" rx="3" fill="#e0d8d0"/>
     <!-- Screen area -->
-    <rect x="-29" y="-124" width="58" height="96" rx="4" fill="#f4e8e0"/>
-    <!-- Content: creator silhouette -->
-    <circle cx="0" cy="-100" r="11" fill="#d65200" fill-opacity="0.22"/>
-    <path d="M-14,-78 Q0,-92 14,-78 Q14,-58 0,-58 Q-14,-58 -14,-78Z" fill="#d65200" fill-opacity="0.15"/>
+    <rect x="-36" y="-183" width="72" height="125" rx="5" fill="#f4e8e0"/>
+    <!-- Creator silhouette -->
+    <circle cx="0" cy="-150" r="14" fill="#d65200" fill-opacity="0.22"/>
+    <path d="M-18,-120 Q0,-138 18,-120 Q18,-95 0,-95 Q-18,-95 -18,-120Z" fill="#d65200" fill-opacity="0.15"/>
     <!-- label bar -->
-    <rect x="-22" y="-52" width="44" height="13" rx="3" fill="#d65200" fill-opacity="0.13"/>
-    <rect x="-10" y="-49" width="20" height="3" rx="1.5" fill="#d65200" fill-opacity="0.5"/>
+    <rect x="-28" y="-88" width="56" height="16" rx="4" fill="#d65200" fill-opacity="0.13"/>
+    <rect x="-14" y="-85" width="28" height="4" rx="2" fill="#d65200" fill-opacity="0.5"/>
     <!-- home bar -->
-    <rect x="-12" y="-18" width="24" height="3" rx="1.5" fill="#e0d8d0"/>
+    <rect x="-16" y="-46" width="32" height="4" rx="2" fill="#e0d8d0"/>
+
     <!-- Speech bubble top-left -->
-    <g transform="translate(-52,-158)">
-      <rect x="0" y="0" width="42" height="28" rx="7" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5"/>
-      <path d="M28,27 L32,36 L22,27" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5" stroke-linejoin="round"/>
-      <!-- heart -->
-      <path d="M21,10 C21,7.5 18,6 16.5,8 C15,6 12,7.5 12,10 C12,13.5 16.5,16.5 16.5,16.5 C16.5,16.5 21,13.5 21,10Z" fill="#d65200"/>
+    <g transform="translate(-70,-222)">
+      <rect x="0" y="0" width="46" height="32" rx="8" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5"/>
+      <path d="M32,31 L36,42 L26,31" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M25,12 C25,9 22,7.5 20,10 C18,7.5 15,9 15,12 C15,16 20,19.5 20,19.5 C20,19.5 25,16 25,12Z" fill="#d65200"/>
     </g>
   </g>
 
   <!-- ===== PHONE 2 – center, slight tilt +4deg ===== -->
-  <g transform="translate(284,274) rotate(4)">
+  <g transform="translate(284,310) rotate(4)">
     <!-- Hand -->
-    <rect x="-26" y="58" width="52" height="90" rx="16" fill="#ecc89a"/>
-    <rect x="-22" y="48" width="44" height="45" rx="12" fill="#ecc89a"/>
-    <rect x="-22" y="46" width="44" height="12" rx="6" fill="#f5dbb4"/>
+    <rect x="-28" y="-35" width="56" height="45" rx="14" fill="#ecc89a"/>
+    <rect x="-28" y="8"   width="56" height="85" rx="18" fill="#ecc89a"/>
+    <rect x="-24" y="-33" width="48" height="10" rx="5" fill="#f5dbb4"/>
+    <ellipse cx="34" cy="10" rx="10" ry="18" fill="#ecc89a"/>
+
     <!-- Phone body -->
-    <rect x="-36" y="-148" width="72" height="134" rx="11" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2"/>
-    <rect x="-12" y="-144" width="24" height="5" rx="2.5" fill="#e0d8d0"/>
+    <rect x="-44" y="-215" width="88" height="180" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
+    <rect x="-14" y="-211" width="28" height="6" rx="3" fill="#e0d8d0"/>
     <!-- Screen -->
-    <rect x="-29" y="-133" width="58" height="104" rx="4" fill="#ffffff"/>
+    <rect x="-36" y="-198" width="72" height="140" rx="5" fill="#ffffff"/>
     <!-- Profile row -->
-    <circle cx="-18" cy="-123" r="5" fill="#e8d4c0"/>
-    <rect x="-10" y="-127" width="26" height="3.5" rx="1.75" fill="#e8d4c0"/>
-    <rect x="-10" y="-121" width="18" height="3" rx="1.5" fill="#ede4da"/>
+    <circle cx="-22" cy="-186" r="7" fill="#e8d4c0"/>
+    <rect x="-12" y="-191" width="32" height="5" rx="2.5" fill="#e8d4c0"/>
+    <rect x="-12" y="-183" width="22" height="4" rx="2" fill="#ede4da"/>
     <!-- Post image -->
-    <rect x="-29" y="-112" width="58" height="44" fill="#f4e8e0"/>
-    <circle cx="-8" cy="-90" r="9" fill="#d65200" fill-opacity="0.18"/>
-    <circle cx="8" cy="-96" r="6" fill="#d65200" fill-opacity="0.12"/>
-    <circle cx="16" cy="-85" r="4" fill="#d65200" fill-opacity="0.1"/>
-    <!-- Like bar -->
-    <path d="M-24,-63 C-24,-65.5 -27,-67 -28.5,-64.5 C-30,-67 -33,-65.5 -33,-63 C-33,-59.5 -28.5,-57 -28.5,-57 C-28.5,-57 -24,-59.5 -24,-63Z" fill="#d65200"/>
-    <rect x="-20" y="-66" width="22" height="3" rx="1.5" fill="#e0d8d0"/>
-    <rect x="-29" y="-59" width="42" height="3" rx="1.5" fill="#ede4da"/>
-    <rect x="-29" y="-53" width="32" height="3" rx="1.5" fill="#ede4da"/>
+    <rect x="-36" y="-173" width="72" height="56" fill="#f4e8e0"/>
+    <circle cx="-10" cy="-145" r="11" fill="#d65200" fill-opacity="0.18"/>
+    <circle cx="10"  cy="-152" r="8"  fill="#d65200" fill-opacity="0.12"/>
+    <circle cx="20"  cy="-138" r="5"  fill="#d65200" fill-opacity="0.1"/>
+    <!-- Like / interaction row -->
+    <path d="M-30,-110 C-30,-113 -33,-115 -35,-112 C-37,-115 -40,-113 -40,-110 C-40,-106 -35,-103 -35,-103 C-35,-103 -30,-106 -30,-110Z" fill="#d65200"/>
+    <rect x="-26" y="-114" width="28" height="4" rx="2" fill="#e0d8d0"/>
+    <rect x="-36" y="-104" width="52" height="4" rx="2" fill="#ede4da"/>
+    <rect x="-36" y="-96"  width="40" height="4" rx="2" fill="#ede4da"/>
     <!-- home bar -->
-    <rect x="-14" y="-22" width="28" height="3" rx="1.5" fill="#e0d8d0"/>
+    <rect x="-18" y="-46" width="36" height="4" rx="2" fill="#e0d8d0"/>
+
     <!-- Floating hearts -->
-    <path d="M44,-158 C44,-161 40.5,-163 38.5,-160 C36.5,-163 33,-161 33,-158 C33,-153.5 38.5,-150 38.5,-150 C38.5,-150 44,-153.5 44,-158Z" fill="#d65200" opacity="0.9"/>
-    <path d="M56,-140 C56,-142.5 53,-144 51.5,-141.5 C50,-144 47,-142.5 47,-140 C47,-136 51.5,-133 51.5,-133 C51.5,-133 56,-136 56,-140Z" fill="#d65200" opacity="0.65"/>
-    <path d="M46,-120 C46,-122 43.5,-123.5 42,-121.5 C40.5,-123.5 38,-122 38,-120 C38,-116.5 42,-114 42,-114 C42,-114 46,-116.5 46,-120Z" fill="#d65200" opacity="0.4"/>
+    <path d="M52,-195 C52,-199 48,-201 46,-198 C44,-201 40,-199 40,-195 C40,-190 46,-186 46,-186 C46,-186 52,-190 52,-195Z" fill="#d65200" opacity="0.9"/>
+    <path d="M66,-175 C66,-178 63,-180 61.5,-177 C60,-180 57,-178 57,-175 C57,-170.5 61.5,-167 61.5,-167 C61.5,-167 66,-170.5 66,-175Z" fill="#d65200" opacity="0.65"/>
+    <path d="M56,-152 C56,-154.5 53.5,-156 52,-153.5 C50.5,-156 48,-154.5 48,-152 C48,-148 52,-145 52,-145 C52,-145 56,-148 56,-152Z" fill="#d65200" opacity="0.4"/>
   </g>
 
   <!-- ===== PHONE 3 – right, tilted +16deg ===== -->
-  <g transform="translate(420,258) rotate(16)">
+  <g transform="translate(428,295) rotate(16)">
     <!-- Hand -->
-    <rect x="-26" y="58" width="52" height="90" rx="16" fill="#f0d3ae"/>
-    <rect x="-22" y="48" width="44" height="45" rx="12" fill="#f0d3ae"/>
-    <rect x="-22" y="46" width="44" height="12" rx="6" fill="#f8e3c6"/>
+    <rect x="-28" y="-35" width="56" height="45" rx="14" fill="#f0d3ae"/>
+    <rect x="-28" y="8"   width="56" height="85" rx="18" fill="#f0d3ae"/>
+    <rect x="-24" y="-33" width="48" height="10" rx="5" fill="#f8e3c6"/>
+    <ellipse cx="-34" cy="10" rx="10" ry="18" fill="#f0d3ae"/>
+
     <!-- Phone body -->
-    <rect x="-36" y="-144" width="72" height="130" rx="11" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2"/>
-    <rect x="-12" y="-140" width="24" height="5" rx="2.5" fill="#e0d8d0"/>
+    <rect x="-44" y="-205" width="88" height="170" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
+    <rect x="-14" y="-201" width="28" height="6" rx="3" fill="#e0d8d0"/>
     <!-- Screen -->
-    <rect x="-29" y="-128" width="58" height="98" rx="4" fill="#fdf9f6"/>
+    <rect x="-36" y="-188" width="72" height="130" rx="5" fill="#fdf9f6"/>
     <!-- Chart axes -->
-    <line x1="-18" y1="-120" x2="-18" y2="-42" stroke="#e0d8d0" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="-18" y1="-42"  x2="25"  y2="-42" stroke="#e0d8d0" stroke-width="1.5" stroke-linecap="round"/>
-    <!-- Bars (growing L to R) -->
-    <rect x="-13" y="-82"  width="11" height="40" rx="2" fill="#d65200" fill-opacity="0.3"/>
-    <rect x="-0"  y="-96"  width="11" height="54" rx="2" fill="#d65200" fill-opacity="0.6"/>
-    <rect x="13"  y="-114" width="11" height="72" rx="2" fill="#d65200"/>
+    <line x1="-22" y1="-178" x2="-22" y2="-78" stroke="#e0d8d0" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-22" y1="-78"  x2="32"  y2="-78" stroke="#e0d8d0" stroke-width="2" stroke-linecap="round"/>
+    <!-- Bars growing L→R -->
+    <rect x="-16" y="-122" width="14" height="44" rx="3" fill="#d65200" fill-opacity="0.3"/>
+    <rect x="1"   y="-140" width="14" height="62" rx="3" fill="#d65200" fill-opacity="0.6"/>
+    <rect x="18"  y="-162" width="14" height="84" rx="3" fill="#d65200"/>
     <!-- Trend line -->
-    <polyline points="-7,-79 6,-92 19,-109" stroke="#e8956a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Dots on trend -->
-    <circle cx="-7"  cy="-79"  r="2.5" fill="#e8956a"/>
-    <circle cx="6"   cy="-92"  r="2.5" fill="#e8956a"/>
-    <circle cx="19"  cy="-109" r="2.5" fill="#e8956a"/>
+    <polyline points="-9,-116 8,-133 25,-154" stroke="#e8956a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-9"  cy="-116" r="3.5" fill="#e8956a"/>
+    <circle cx="8"   cy="-133" r="3.5" fill="#e8956a"/>
+    <circle cx="25"  cy="-154" r="3.5" fill="#e8956a"/>
     <!-- home bar -->
-    <rect x="-14" y="-22" width="28" height="3" rx="1.5" fill="#e0d8d0"/>
+    <rect x="-18" y="-46" width="36" height="4" rx="2" fill="#e0d8d0"/>
+
     <!-- Speech bubble top-right -->
-    <g transform="translate(22,-162)">
-      <rect x="0" y="0" width="50" height="28" rx="7" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5"/>
-      <path d="M10,27 L6,36 L16,27" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5" stroke-linejoin="round"/>
-      <!-- 3 hearts -->
-      <path d="M15,11 C15,8.5 12,7 10.5,9 C9,7 6,8.5 6,11 C6,14 10.5,17 10.5,17 C10.5,17 15,14 15,11Z" fill="#d65200"/>
-      <path d="M27,11 C27,8.5 24,7 22.5,9 C21,7 18,8.5 18,11 C18,14 22.5,17 22.5,17 C22.5,17 27,14 27,11Z" fill="#d65200"/>
-      <path d="M39,11 C39,8.5 36,7 34.5,9 C33,7 30,8.5 30,11 C30,14 34.5,17 34.5,17 C34.5,17 39,14 39,11Z" fill="#d65200"/>
+    <g transform="translate(28,-228)">
+      <rect x="0" y="0" width="56" height="32" rx="8" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5"/>
+      <path d="M12,31 L8,42 L18,31" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M17,13 C17,10 14,8.5 12.5,11 C11,8.5 8,10 8,13 C8,17 12.5,20 12.5,20 C12.5,20 17,17 17,13Z" fill="#d65200"/>
+      <path d="M31,13 C31,10 28,8.5 26.5,11 C25,8.5 22,10 22,13 C22,17 26.5,20 26.5,20 C26.5,20 31,17 31,13Z" fill="#d65200"/>
+      <path d="M45,13 C45,10 42,8.5 40.5,11 C39,8.5 36,10 36,13 C36,17 40.5,20 40.5,20 C40.5,20 45,17 45,13Z" fill="#d65200"/>
     </g>
   </g>
 
