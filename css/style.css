@@ -1131,29 +1131,34 @@ footer .container {
   min-width: 0;
 }
 
-/* タブレット（〜900px）: hero グリッドをシングルカラムに */
+/* タブレット（〜900px）: 非ヒーローgridは1列、ヒーローは1fr 1frで維持 */
 @media (max-width: 900px) {
+  /* About など非ヒーローは1列に */
   .hero-grid {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
-  /* ヒーローイラストはテキストの下・右揃えで表示 */
+  /* ヒーロー：中間サイズは1fr 1frで2列を維持 */
+  .hero .hero-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+    align-items: center !important;
+  }
   .hero .hero-grid > div:last-child,
   .illust-hero {
-    display: flex !important;
-    justify-content: flex-end;
-    height: auto !important;
+    display: block !important;
+    height: 300px !important;
   }
   .hero .hero-grid > div:last-child img {
-    width: auto !important;
-    max-width: 300px !important;
-    height: auto !important;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
+    object-position: center !important;
   }
   .hero-grid > div:first-child {
     padding-bottom: 0 !important;
   }
-  /* Aboutセクション：モバイルでテキスト→イラストの順に */
+  /* Aboutセクション：テキスト→イラストの順に */
   .about-illust {
     display: flex !important;
     justify-content: center;
@@ -1164,6 +1169,26 @@ footer .container {
     max-width: 300px;
     width: 100%;
     display: block;
+  }
+}
+
+/* スマホ（〜768px）: ヒーローも1列に、イラストはテキスト下・右揃え */
+@media (max-width: 768px) {
+  .hero .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .hero .hero-grid > div:last-child,
+  .illust-hero {
+    display: flex !important;
+    justify-content: flex-end;
+    height: auto !important;
+  }
+  .hero .hero-grid > div:last-child img {
+    width: auto !important;
+    max-width: 280px !important;
+    height: auto !important;
+    object-fit: contain !important;
   }
 }
 
