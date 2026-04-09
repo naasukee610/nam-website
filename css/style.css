@@ -887,11 +887,23 @@ footer .container {
   .hero-grid {
     grid-template-columns: 1fr !important;
   }
-  .hero-grid > div:last-child {
-    display: none; /* 画像/イラストは非表示 */
+  /* ヒーローセクション内のイラスト/写真のみ非表示 */
+  .hero .hero-grid > div:last-child {
+    display: none;
   }
   .hero-grid > div:first-child {
     padding-bottom: 0 !important;
+  }
+  /* Aboutセクションのイラストはモバイルで表示 */
+  .about-illust {
+    display: block !important;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .about-illust img {
+    max-width: 260px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -928,24 +940,24 @@ footer .container {
   /* ---- フロー ---- */
   .flow-steps { flex-direction: column; gap: 0; }
   .flow-step {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     padding: 20px 0;
     border-bottom: var(--border);
-    display: grid;
-    grid-template-columns: 28px 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 12px;
+    border: var(--border);
+    border-top: none;
+    padding: 20px 16px;
   }
-  .flow-step .flow-num  { grid-column: 1; grid-row: 1; margin-bottom: 0; }
-  .flow-step .flow-title { grid-column: 2; grid-row: 1; }
-  .flow-step .flow-desc { grid-column: 2; grid-row: 2; margin-top: 4px; }
+  .flow-step:first-child { border-top: var(--border); }
+  .flow-step svg { display: none; }
+  .flow-step .flow-num  { margin-bottom: 6px; }
+  .flow-step .flow-title { font-size: 0.95rem; margin-bottom: 4px; }
+  .flow-step .flow-desc { font-size: 0.78rem; }
   .flow-arrow { display: none; }
 
   /* ---- ボーダー付きボックス ---- */
   div[style*="padding: 40px"] { padding: 24px !important; }
-
-  /* ---- デスクトップのみ表示 ---- */
-  .desktop-only { display: none !important; }
 
   /* ---- nam プロフィール写真（丸） ---- */
   .hero-photo-wrap {
