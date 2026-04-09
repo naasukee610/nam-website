@@ -888,10 +888,13 @@ footer .container {
   box-shadow: 0 6px 20px rgba(214,82,0,0.4);
 }
 
-@media (max-width: 768px) {
+/* ハンバーガーは900px以下で表示、nav-linksを隠す */
+@media (max-width: 900px) {
   .mob-menu-btn { display: flex; }
-  .contact-fab  { display: block; }
+  .nav-links    { display: none; }
 }
+/* お問い合わせFABは常に表示 */
+.contact-fab { display: block; }
 
 /* ---- Contact Grid ---- */
 .contact-grid {
@@ -914,11 +917,12 @@ footer .container {
 }
 .flow-step {
   flex: 1;
-  text-align: center;
+  text-align: left;
   padding: 28px 16px;
   border: 1px solid var(--border-c);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
+.flow-step svg { display: block; margin-bottom: 12px; }
 .flow-step:hover {
   transform: translateY(-6px);
   border-color: var(--orange);
