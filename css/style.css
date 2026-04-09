@@ -790,6 +790,10 @@ footer .container {
 }
 
 @media (max-width: 768px) {
+  .philosophy-grid { grid-template-columns: 1fr !important; }
+  .philosophy-grid > div { border-right: none !important; border-bottom: var(--border); }
+  .philosophy-grid > div:last-child { border-bottom: none; }
+
   .video-scroll { padding: 4px 0 16px 0; }
   .video-thumb { width: 150px; height: 267px; }
 }
