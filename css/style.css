@@ -885,22 +885,44 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  section         { padding: 60px 0; }
-  .hero           { padding: 72px 0 60px; }
+  section         { padding: 48px 0; }
+  .hero           { padding: 64px 0 48px; }
 
+  /* ---- テキスト ---- */
+  .hero h1        { font-size: clamp(1.85rem, 8vw, 2.4rem); }
+  .hero p         { font-size: 0.88rem; line-height: 1.8; }
+  p               { font-size: 0.9rem; }
+  .section-title  { font-size: 1.6rem; }
+
+  /* ---- グリッド ---- */
   .cards-2,
   .cards-3        { grid-template-columns: 1fr; }
+  .grid-2         { grid-template-columns: 1fr !important; gap: 32px !important; }
 
+  /* ---- 統計 ---- */
   .stats          { grid-template-columns: repeat(2, 1fr); }
   .stat-item:nth-child(2) { border-right: none; }
   .stat-item:nth-child(3) { border-right: var(--border); }
   .stat-item:nth-child(2),
   .stat-item:nth-child(3) { border-top: var(--border); }
 
-  .nav-links      { display: none; }
+  /* SNS 5列 → 3列 */
+  .stats-5        { grid-template-columns: repeat(3, 1fr) !important; }
+  .stats-5 .stat-item:nth-child(3) { border-right: none; }
+  .stats-5 .stat-item:nth-child(4),
+  .stats-5 .stat-item:nth-child(5) { border-top: var(--border); }
+  .stats-5 .stat-item:nth-child(5) { border-right: none; }
 
+  /* ---- テーブル ---- */
+  table           { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+  table td,
+  table th        { white-space: normal; min-width: 120px; }
+
+  /* ---- ナビ・フッター ---- */
+  .nav-links      { display: none; }
   footer .container { flex-direction: column; gap: 16px; text-align: center; }
 
+  /* ---- フロー ---- */
   .flow-steps { flex-direction: column; gap: 0; }
   .flow-step {
     text-align: left;
@@ -911,8 +933,11 @@ footer .container {
     grid-template-rows: auto auto;
     column-gap: 12px;
   }
-  .flow-step .flow-num { grid-column: 1; grid-row: 1; margin-bottom: 0; }
+  .flow-step .flow-num  { grid-column: 1; grid-row: 1; margin-bottom: 0; }
   .flow-step .flow-title { grid-column: 2; grid-row: 1; }
   .flow-step .flow-desc { grid-column: 2; grid-row: 2; margin-top: 4px; }
   .flow-arrow { display: none; }
+
+  /* ---- ボーダー付きボックス ---- */
+  div[style*="padding: 40px"] { padding: 24px !important; }
 }
