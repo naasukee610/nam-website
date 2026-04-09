@@ -796,6 +796,19 @@ footer .container {
   .video-thumb { width: 150px; height: 267px; }
 }
 
+/* ---- Contact Grid ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
 /* ---- Flow Steps ---- */
 .flow-steps {
   display: flex;
