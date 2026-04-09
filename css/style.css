@@ -909,6 +909,27 @@ footer .container {
   }
 }
 
+/* ---- Genre Cards (4列) ---- */
+.cards-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.genre-photo {
+  margin-top: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+.genre-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ---- Flow Steps ---- */
 .flow-steps {
   display: flex;
