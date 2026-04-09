@@ -915,11 +915,11 @@ footer .container {
 
 /* ---- nam Hero ---- */
 .nam-hero {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
-.nam-hero .nam-hero-banner {
-  margin-bottom: 0;
+.nam-hero .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .nam-hero-top {
   display: grid;
