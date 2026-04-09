@@ -1131,6 +1131,11 @@ footer .container {
   min-width: 0;
 }
 
+/* タブレット：コンテナの左右余白を広げる */
+@media (min-width: 769px) and (max-width: 900px) {
+  .container { padding-left: 48px; padding-right: 48px; }
+}
+
 /* タブレット（〜900px）: 非ヒーローgridは1列、ヒーローは1fr 1frで維持 */
 @media (max-width: 900px) {
   /* About など非ヒーローは1列に */
