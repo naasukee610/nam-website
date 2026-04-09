@@ -986,7 +986,7 @@ footer .container {
   display: flex;
   flex-direction: column;
 }
-.cards-4 .card p {
+.cards-4 .card > p:not(.card-label) {
   flex: 1;
 }
 .genre-photo {
