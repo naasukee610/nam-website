@@ -1133,23 +1133,28 @@ footer .container {
 
 /* タブレット（〜900px）: hero グリッドをシングルカラムに */
 @media (max-width: 900px) {
+  /* About など非ヒーローの hero-grid は1列 */
   .hero-grid {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
-  /* ヒーローセクション内のイラストをモバイルでも表示 */
+  /* ヒーローセクションのみ：テキスト左＋小イラスト右の2列 */
+  .hero .hero-grid {
+    grid-template-columns: 1fr 130px !important;
+    gap: 16px !important;
+    align-items: start !important;
+  }
   .hero .hero-grid > div:last-child {
-    display: flex !important;
-    justify-content: center;
+    display: block !important;
     height: auto !important;
   }
   .illust-hero {
     height: auto !important;
   }
   .hero .hero-grid > div:last-child img {
-    width: 100%;
-    max-width: 340px;
+    width: 100% !important;
     height: auto !important;
+    max-width: none !important;
     object-fit: contain !important;
   }
   .hero-grid > div:first-child {
