@@ -1130,9 +1130,9 @@ footer .container {
   min-width: 0;
 }
 
-/* iPhone（〜430px）：28px余白 */
+/* iPhone（〜430px）：40px余白 */
 @media (max-width: 430px) {
-  .container { width: auto; padding: 0 28px; }
+  .container { width: auto; padding: 0 40px; }
 }
 
 /* タブレット（〜900px）: 非ヒーローgridは1列、ヒーローは1fr 1frで維持 */
