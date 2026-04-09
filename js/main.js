@@ -1,4 +1,39 @@
 /* ===========================
+   MOBILE UI（ハンバーガー・FAB）
+   =========================== */
+document.body.insertAdjacentHTML('beforeend', `
+  <button class="mob-menu-btn" id="mobMenuBtn" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="mob-menu" id="mobMenu">
+    <a href="index.html">Home</a>
+    <a href="studio.html">nana studio</a>
+    <a href="nam.html">nam</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <a href="contact.html" class="contact-fab">お問い合わせ</a>
+`);
+
+const mobBtn     = document.getElementById('mobMenuBtn');
+const mobMenu    = document.getElementById('mobMenu');
+const mobOverlay = document.getElementById('mobOverlay');
+
+function closeMobMenu() {
+  mobBtn.classList.remove('open');
+  mobMenu.classList.remove('open');
+  mobOverlay.classList.remove('open');
+}
+
+mobBtn.addEventListener('click', () => {
+  mobBtn.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+  mobOverlay.classList.toggle('open');
+});
+mobOverlay.addEventListener('click', closeMobMenu);
+mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobMenu));
+
+/* ===========================
    RIPPLE ON BUTTONS
    =========================== */
 document.querySelectorAll('.btn').forEach(btn => {

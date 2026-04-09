@@ -794,6 +794,105 @@ footer .container {
   .video-thumb { width: 150px; height: 267px; }
 }
 
+/* ===========================
+   MOBILE UI（ハンバーガー・FAB）
+   =========================== */
+
+/* ハンバーガーボタン */
+.mob-menu-btn {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 1100;
+  width: 44px;
+  height: 44px;
+  background: var(--brown-dark);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.mob-menu-btn span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.mob-menu-btn.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.mob-menu-btn.open span:nth-child(2) { opacity: 0; }
+.mob-menu-btn.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* スライドインメニュー */
+.mob-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100%;
+  background: var(--white);
+  z-index: 1050;
+  padding: 80px 32px 40px;
+  transition: right 0.35s ease;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+}
+.mob-menu.open { right: 0; }
+.mob-menu a {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--dark);
+  padding: 18px 0;
+  border-bottom: var(--border);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.mob-menu a:first-child { border-top: var(--border); }
+
+/* オーバーレイ */
+.mob-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1040;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+.mob-overlay.open { opacity: 1; pointer-events: all; }
+
+/* お問い合わせ FAB */
+.contact-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  z-index: 1000;
+  background: var(--orange);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 12px 18px;
+  border-radius: 40px;
+  text-decoration: none;
+  display: none;
+  box-shadow: 0 4px 16px rgba(214,82,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214,82,0,0.4);
+}
+
+@media (max-width: 768px) {
+  .mob-menu-btn { display: flex; }
+  .contact-fab  { display: block; }
+}
+
 /* ---- Contact Grid ---- */
 .contact-grid {
   display: grid;
