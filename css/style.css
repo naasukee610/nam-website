@@ -909,6 +909,48 @@ footer .container {
   }
 }
 
+/* ---- nam Hero ---- */
+.nam-hero {
+  padding-bottom: 0;
+}
+.nam-hero-top {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 48px;
+  align-items: flex-start;
+  padding-bottom: 48px;
+}
+.nam-hero-text {
+  padding-top: 8px;
+}
+.nam-hero-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-top: 16px;
+}
+.nam-hero-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.nam-hero-banner {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.nam-hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
 /* ---- SNS Platform Cards ---- */
 .sns-cards {
   display: grid;
@@ -1158,6 +1200,21 @@ footer .container {
 
   /* ---- ボーダー付きボックス ---- */
   div[style*="padding: 40px"] { padding: 24px !important; }
+
+  /* ---- nam Hero (mobile) ---- */
+  .nam-hero-top {
+    grid-template-columns: 1fr 110px;
+    gap: 16px;
+    padding-bottom: 28px;
+  }
+  .nam-hero-circle {
+    width: 110px;
+    height: 110px;
+    margin-top: 4px;
+  }
+  .nam-hero-banner {
+    height: 200px;
+  }
 
   /* ---- nam プロフィール写真（丸） ---- */
   .hero-photo-wrap {
