@@ -1135,22 +1135,35 @@ footer .container {
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
-  /* ヒーローセクション内のイラスト/写真のみ非表示 */
+  /* ヒーローセクション内のイラストをモバイルでも表示 */
   .hero .hero-grid > div:last-child {
-    display: none;
+    display: flex !important;
+    justify-content: center;
+    height: auto !important;
+  }
+  .illust-hero {
+    height: auto !important;
+  }
+  .hero .hero-grid > div:last-child img {
+    width: 100%;
+    max-width: 340px;
+    height: auto !important;
+    object-fit: contain !important;
   }
   .hero-grid > div:first-child {
     padding-bottom: 0 !important;
   }
-  /* Aboutセクションのイラストはモバイルで表示 */
+  /* Aboutセクションのイラスト */
   .about-illust {
     display: block !important;
     text-align: center;
     margin-top: 24px;
   }
   .about-illust img {
-    max-width: 260px;
+    max-width: 340px;
+    width: 100%;
     margin: 0 auto;
     display: block;
   }
