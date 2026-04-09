@@ -954,7 +954,7 @@ footer .container {
 /* ---- SNS Platform Cards ---- */
 .sns-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 40px;
 }
@@ -1015,7 +1015,6 @@ footer .container {
 }
 @media (max-width: 768px) {
   .sns-cards { grid-template-columns: repeat(2, 1fr); }
-  .sns-card-other { grid-column: span 2; }
 }
 
 /* ---- Genre Cards (4列) ---- */
