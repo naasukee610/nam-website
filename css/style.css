@@ -1137,11 +1137,11 @@ footer .container {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
-  /* ヒーローイラストはテキストの下に表示 */
+  /* ヒーローイラストはテキストの下・右揃えで表示 */
   .hero .hero-grid > div:last-child,
   .illust-hero {
     display: flex !important;
-    justify-content: center;
+    justify-content: flex-end;
     height: auto !important;
   }
   .hero .hero-grid > div:last-child img {
@@ -1153,11 +1153,12 @@ footer .container {
   .hero-grid > div:first-child {
     padding-bottom: 0 !important;
   }
-  /* Aboutセクションのイラスト */
+  /* Aboutセクション：モバイルでテキスト→イラストの順に */
   .about-illust {
     display: flex !important;
     justify-content: center;
     margin-top: 8px;
+    order: 2;
   }
   .about-illust img {
     max-width: 300px;
