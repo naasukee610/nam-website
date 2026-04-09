@@ -940,4 +940,24 @@ footer .container {
 
   /* ---- ボーダー付きボックス ---- */
   div[style*="padding: 40px"] { padding: 24px !important; }
+
+  /* ---- デスクトップのみ表示 ---- */
+  .desktop-only { display: none !important; }
+
+  /* ---- nam プロフィール写真（丸） ---- */
+  .hero-photo-wrap {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 32px;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  .hero-photo-wrap img {
+    width: 160px !important;
+    height: 160px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+    object-position: center top;
+  }
 }
