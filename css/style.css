@@ -66,9 +66,8 @@ img { max-width: 100%; display: block; }
    =========================== */
 
 .container {
-  max-width: var(--max-width);
+  width: min(var(--max-width), calc(100% - 128px));
   margin: 0 auto;
-  padding: 0 28px;
 }
 
 section {
@@ -1131,9 +1130,9 @@ footer .container {
   min-width: 0;
 }
 
-/* 431〜960px：余白を64pxで統一 */
-@media (min-width: 431px) and (max-width: 960px) {
-  .container { padding-left: 64px; padding-right: 64px; }
+/* iPhone（〜430px）：28px余白 */
+@media (max-width: 430px) {
+  .container { width: auto; padding: 0 28px; }
 }
 
 /* タブレット（〜900px）: 非ヒーローgridは1列、ヒーローは1fr 1frで維持 */
