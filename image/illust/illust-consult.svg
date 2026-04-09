@@ -1,18 +1,15 @@
 <svg viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- ===== PHONE 1 – left, tilted -14deg ===== -->
-  <!-- origin = grip center of hand -->
+  <!-- ===== PHONE 1 – left, tilted -14deg, dark skin ===== -->
   <g transform="translate(140,305) rotate(-14)">
-    <!-- Hand: grips phone from y=-35 upward, palm below -->
-    <rect x="-28" y="-35" width="56" height="45" rx="14" fill="#c98a62"/>
-    <rect x="-28" y="8"   width="56" height="85" rx="18" fill="#c98a62"/>
-    <!-- Knuckle highlight -->
-    <rect x="-24" y="-33" width="48" height="10" rx="5" fill="#d9a07a"/>
-    <!-- Thumb side bump -->
-    <ellipse cx="-34" cy="10" rx="10" ry="18" fill="#c98a62"/>
 
-    <!-- Phone body (bottom overlaps hand at y=-35) -->
-    <rect x="-44" y="-200" width="88" height="165" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
+    <!-- 1. Palm / wrist (behind phone) -->
+    <path d="M-24,-32 C-27,15 -28,70 -24,120 C-20,150 -16,165 -14,172
+             L14,172 C16,165 20,150 24,120 C28,70 27,15 24,-32 Z"
+      fill="#b87448"/>
+
+    <!-- Phone body (on top of palm) -->
+    <rect x="-44" y="-200" width="88" height="168" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
     <!-- top pill -->
     <rect x="-14" y="-196" width="28" height="6" rx="3" fill="#e0d8d0"/>
     <!-- Screen area -->
@@ -26,6 +23,16 @@
     <!-- home bar -->
     <rect x="-16" y="-46" width="32" height="4" rx="2" fill="#e0d8d0"/>
 
+    <!-- 2. Thumb (front of phone, right side) -->
+    <path d="M32,-50 C36,-75 44,-100 46,-112 C48,-124 44,-132 36,-128
+             C28,-124 24,-108 24,-90 C24,-72 26,-52 32,-50 Z"
+      fill="#b87448" stroke="#4a3020" stroke-width="1.2"/>
+
+    <!-- 3. Finger tips (left side, peeking behind phone) -->
+    <rect x="-54" y="-110" width="14" height="20" rx="7" fill="#b87448" stroke="#4a3020" stroke-width="1"/>
+    <rect x="-54" y="-86"  width="14" height="20" rx="7" fill="#b87448" stroke="#4a3020" stroke-width="1"/>
+    <rect x="-54" y="-62"  width="14" height="18" rx="7" fill="#b87448" stroke="#4a3020" stroke-width="1"/>
+
     <!-- Speech bubble top-left -->
     <g transform="translate(-70,-222)">
       <rect x="0" y="0" width="46" height="32" rx="8" fill="#fdf9f6" stroke="#d9cfc7" stroke-width="1.5"/>
@@ -34,16 +41,16 @@
     </g>
   </g>
 
-  <!-- ===== PHONE 2 – center, slight tilt +4deg ===== -->
+  <!-- ===== PHONE 2 – center, slight tilt +4deg, medium skin ===== -->
   <g transform="translate(284,310) rotate(4)">
-    <!-- Hand -->
-    <rect x="-28" y="-35" width="56" height="45" rx="14" fill="#ecc89a"/>
-    <rect x="-28" y="8"   width="56" height="85" rx="18" fill="#ecc89a"/>
-    <rect x="-24" y="-33" width="48" height="10" rx="5" fill="#f5dbb4"/>
-    <ellipse cx="34" cy="10" rx="10" ry="18" fill="#ecc89a"/>
+
+    <!-- 1. Palm / wrist (behind phone) -->
+    <path d="M-24,-32 C-27,15 -28,70 -24,120 C-20,150 -16,165 -14,172
+             L14,172 C16,165 20,150 24,120 C28,70 27,15 24,-32 Z"
+      fill="#dba878"/>
 
     <!-- Phone body -->
-    <rect x="-44" y="-215" width="88" height="180" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
+    <rect x="-44" y="-215" width="88" height="183" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
     <rect x="-14" y="-211" width="28" height="6" rx="3" fill="#e0d8d0"/>
     <!-- Screen -->
     <rect x="-36" y="-198" width="72" height="140" rx="5" fill="#ffffff"/>
@@ -64,22 +71,32 @@
     <!-- home bar -->
     <rect x="-18" y="-46" width="36" height="4" rx="2" fill="#e0d8d0"/>
 
+    <!-- 2. Thumb (front, left side) -->
+    <path d="M-32,-50 C-36,-75 -44,-100 -46,-112 C-48,-124 -44,-132 -36,-128
+             C-28,-124 -24,-108 -24,-90 C-24,-72 -26,-52 -32,-50 Z"
+      fill="#dba878" stroke="#6a4828" stroke-width="1.2"/>
+
+    <!-- 3. Finger tips (right side) -->
+    <rect x="40" y="-110" width="14" height="20" rx="7" fill="#dba878" stroke="#6a4828" stroke-width="1"/>
+    <rect x="40" y="-86"  width="14" height="20" rx="7" fill="#dba878" stroke="#6a4828" stroke-width="1"/>
+    <rect x="40" y="-62"  width="14" height="18" rx="7" fill="#dba878" stroke="#6a4828" stroke-width="1"/>
+
     <!-- Floating hearts -->
     <path d="M52,-195 C52,-199 48,-201 46,-198 C44,-201 40,-199 40,-195 C40,-190 46,-186 46,-186 C46,-186 52,-190 52,-195Z" fill="#d65200" opacity="0.9"/>
     <path d="M66,-175 C66,-178 63,-180 61.5,-177 C60,-180 57,-178 57,-175 C57,-170.5 61.5,-167 61.5,-167 C61.5,-167 66,-170.5 66,-175Z" fill="#d65200" opacity="0.65"/>
     <path d="M56,-152 C56,-154.5 53.5,-156 52,-153.5 C50.5,-156 48,-154.5 48,-152 C48,-148 52,-145 52,-145 C52,-145 56,-148 56,-152Z" fill="#d65200" opacity="0.4"/>
   </g>
 
-  <!-- ===== PHONE 3 – right, tilted +16deg ===== -->
+  <!-- ===== PHONE 3 – right, tilted +16deg, light skin ===== -->
   <g transform="translate(428,295) rotate(16)">
-    <!-- Hand -->
-    <rect x="-28" y="-35" width="56" height="45" rx="14" fill="#f0d3ae"/>
-    <rect x="-28" y="8"   width="56" height="85" rx="18" fill="#f0d3ae"/>
-    <rect x="-24" y="-33" width="48" height="10" rx="5" fill="#f8e3c6"/>
-    <ellipse cx="-34" cy="10" rx="10" ry="18" fill="#f0d3ae"/>
+
+    <!-- 1. Palm / wrist (behind phone) -->
+    <path d="M-24,-32 C-27,15 -28,70 -24,120 C-20,150 -16,165 -14,172
+             L14,172 C16,165 20,150 24,120 C28,70 27,15 24,-32 Z"
+      fill="#e8c490"/>
 
     <!-- Phone body -->
-    <rect x="-44" y="-205" width="88" height="170" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
+    <rect x="-44" y="-205" width="88" height="173" rx="14" fill="#fdf9f6" stroke="#5a3e2e" stroke-width="2.5"/>
     <rect x="-14" y="-201" width="28" height="6" rx="3" fill="#e0d8d0"/>
     <!-- Screen -->
     <rect x="-36" y="-188" width="72" height="130" rx="5" fill="#fdf9f6"/>
@@ -97,6 +114,16 @@
     <circle cx="25"  cy="-154" r="3.5" fill="#e8956a"/>
     <!-- home bar -->
     <rect x="-18" y="-46" width="36" height="4" rx="2" fill="#e0d8d0"/>
+
+    <!-- 2. Thumb (front, right side) -->
+    <path d="M32,-50 C36,-75 44,-100 46,-112 C48,-124 44,-132 36,-128
+             C28,-124 24,-108 24,-90 C24,-72 26,-52 32,-50 Z"
+      fill="#e8c490" stroke="#7a5830" stroke-width="1.2"/>
+
+    <!-- 3. Finger tips (left side) -->
+    <rect x="-54" y="-110" width="14" height="20" rx="7" fill="#e8c490" stroke="#7a5830" stroke-width="1"/>
+    <rect x="-54" y="-86"  width="14" height="20" rx="7" fill="#e8c490" stroke="#7a5830" stroke-width="1"/>
+    <rect x="-54" y="-62"  width="14" height="18" rx="7" fill="#e8c490" stroke="#7a5830" stroke-width="1"/>
 
     <!-- Speech bubble top-right -->
     <g transform="translate(28,-228)">
