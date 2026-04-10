@@ -139,11 +139,9 @@ nav .container {
   font-size: clamp(2.4rem, 5.5vw, 4rem);
   font-weight: 700;
   line-height: 1.3;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   margin-bottom: 24px;
   color: var(--black);
-  word-break: keep-all;
-  overflow-wrap: normal;
 }
 
 .hero h1 em {
