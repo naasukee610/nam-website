@@ -1214,6 +1214,9 @@ footer .container {
 
   /* ---- 統計 ---- */
   .stats          { grid-template-columns: repeat(2, 1fr); }
+  .stat-item      { padding: 24px 12px; }
+  .stat-number    { font-size: 1.5rem; }
+  .stat-label     { font-size: 0.68rem; }
 
   /* SNS 5列 → 3列 */
   .stats-5        { grid-template-columns: repeat(3, 1fr) !important; }
